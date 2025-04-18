@@ -28,13 +28,7 @@ module.exports = {
 			],
 		},
 	],
-	plugins: [
-		'react',
-		'@typescript-eslint',
-		'simple-import-sort',
-		'import',
-		'prettier',
-	],
+	plugins: ['react', '@typescript-eslint', 'simple-import-sort', 'prettier'],
 	rules: {
 		'prettier/prettier': 'error',
 		'react/react-in-jsx-scope': 'off',
@@ -53,31 +47,5 @@ module.exports = {
 			},
 		],
 		'simple-import-sort/exports': 'error',
-		'import/first': 'error',
-		'import/newline-after-import': 'error',
-		'import/order': [
-			'error',
-			{
-				pathGroups: [
-					{
-						pattern: '@/**',
-						group: 'internal',
-						position: 'after',
-					},
-					{
-						pattern: './**',
-						group: 'internal',
-						position: 'after',
-					},
-				],
-				'newlines-between': 'always',
-				pathGroupsExcludedImportTypes: ['builtin'],
-				alphabetize: {
-					order: 'asc',
-					caseInsensitive: true,
-				},
-			},
-		],
-		'import/no-default-export': 'error',
 	},
 };

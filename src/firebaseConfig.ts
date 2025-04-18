@@ -1,11 +1,10 @@
-
 const firebaseConfig = {
-    apiKey: "AIzaSyCEed_58BbcnJhBUKbMlQe81gwJ1k_7c1A",
-    authDomain: "react-auth-5d459.firebaseapp.com",
-    projectId: "react-auth-5d459",
-    storageBucket: "react-auth-5d459.firebasestorage.app",
-    messagingSenderId: "769921821877",
-    appId: "1:769921821877:web:8e82950963ae2f2e99a2fc"
+    apiKey: import.meta.env.VITE_API_KEY,
+    authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+    projectId: import.meta.env.VITE_PROJECT_ID,
+    storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
+    appId: import.meta.env.VITE_APP_ID,
 };
 
 export default firebaseConfig;

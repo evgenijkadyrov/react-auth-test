@@ -1,7 +1,8 @@
 import { createContext, ReactNode, useEffect, useState } from 'react';
 import { User } from 'firebase/auth';
-import auth, { loginWithGoogle, logout } from './firebase';
+
 import { AuthContextType } from './types/types.ts';
+import auth, { loginWithGoogle, logout } from './firebase';
 
 export const AuthContext = createContext<AuthContextType | undefined>(
 	undefined

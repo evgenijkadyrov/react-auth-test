@@ -1,6 +1,7 @@
-import Layout from '@/components/Layout';
 import { TEXTS } from '@constants/texts.ts';
 import { useAuthentification } from '@hooks/useAuthentification.ts';
+
+import Layout from '@/components/Layout';
 
 const WelcomePage = () => {
 	const { user, logout } = useAuthentification();

@@ -33,19 +33,7 @@ module.exports = {
 		'prettier/prettier': 'error',
 		'react/react-in-jsx-scope': 'off',
 		'@typescript-eslint/no-unused-vars': 'warn',
-		'simple-import-sort/imports': [
-			'error',
-			{
-				groups: [
-					['^react', '^@?\\w'],
-					['^(@|components)(/.*|$)'],
-					['^\\u0000'],
-					['^\\.\\.(?!/?$)', '^\\.\\./?$'],
-					['^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'],
-					['^.+\\.?(css)$'],
-				],
-			},
-		],
+		'simple-import-sort/imports': 'error',
 		'simple-import-sort/exports': 'error',
 	},
 };

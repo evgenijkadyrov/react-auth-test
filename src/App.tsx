@@ -1,6 +1,6 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import WelcomePage from '@pages/WelcomPage';
+import { BrowserRouter, Route,Routes } from 'react-router-dom';
 import LoginPage from '@pages/LoginPage';
+import WelcomePage from '@pages/WelcomPage';
 
 import { ROUTES } from './constants/routers.ts';
 

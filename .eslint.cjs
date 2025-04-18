@@ -1,0 +1,83 @@
+module.exports = {
+	env: {
+		browser: true,
+		es2021: true,
+		node: true,
+	},
+	extends: [
+		'eslint:recommended',
+		'plugin:react/recommended',
+		'plugin:react/jsx-runtime',
+		'plugin:@typescript-eslint/recommended',
+		'prettier',
+	],
+	parser: '@typescript-eslint/parser',
+	parserOptions: {
+		ecmaFeatures: {
+			jsx: true,
+		},
+		ecmaVersion: 'latest',
+		sourceType: 'module',
+	},
+	overrides: [
+		{
+			files: ['*.ts', '*.tsx', '*.d.ts'],
+			extends: [
+				'plugin:@typescript-eslint/recommended',
+				'plugin:@typescript-eslint/recommended-requiring-type-checking',
+			],
+		},
+	],
+	plugins: [
+		'react',
+		'@typescript-eslint',
+		'simple-import-sort',
+		'import',
+		'prettier',
+	],
+	rules: {
+		'prettier/prettier': 'error',
+		'react/react-in-jsx-scope': 'off',
+		'@typescript-eslint/no-unused-vars': 'warn',
+		'simple-import-sort/imports': [
+			'error',
+			{
+				groups: [
+					['^react', '^@?\\w'],
+					['^(@|components)(/.*|$)'],
+					['^\\u0000'],
+					['^\\.\\.(?!/?$)', '^\\.\\./?$'],
+					['^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'],
+					['^.+\\.?(css)$'],
+				],
+			},
+		],
+		'simple-import-sort/exports': 'error',
+		'import/first': 'error',
+		'import/newline-after-import': 'error',
+		'import/order': [
+			'error',
+			{
+				pathGroups: [
+					{
+						pattern: '@/**',
+						group: 'internal',
+						position: 'after',
+					},
+					{
+						pattern: './**',
+						group: 'internal',
+						position: 'after',
+					},
+				],
+				'newlines-between': 'always',
+				pathGroupsExcludedImportTypes: ['builtin'],
+				alphabetize: {
+					order: 'asc',
+					caseInsensitive: true,
+				},
+			},
+		],
+		'import/no-default-export': 'error',
+	},
+};
